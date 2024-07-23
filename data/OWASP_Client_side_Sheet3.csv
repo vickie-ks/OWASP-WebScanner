@@ -1,0 +1,92 @@
+Broken Client-side Access Control,DOM-based XSS,Sensitive Data Leakage,Vulnerable and Outdated Components        ,Lack of Third-party Origin Control        ,Sensitive Data Stored Client-Side
+"<a href=""admin-dashboard.html"">Admin Dashboard</a>
+",document.getElementById('output').innerHTML = location.hash.substring(1);,"<input type=""text"" name=""creditCardNumber"" autocomplete=""on"">","{ name: 'jQuery', currentVersion: '3.6.0', latestVersion: '3.6.0' }","<iframe src=""http://example.com/widget""></iframe>","localStorage.setItem('sessionToken', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...');
+"
+"if (user.role === 'admin') {
+  document.getElementById('adminLink').style.display = 'block';
+} else {
+  document.getElementById('adminLink').style.display = 'none';
+}",document.write(decodeURIComponent(location.search.substring(1)));,"console.log(""User password is: "" + password);","{ name: 'Bootstrap', currentVersion: '4.1.3', latestVersion: '5.1.0' }","window.addEventListener(""message"", function(event) {
+  if (event.origin !== 'http://known-origin.com') {
+    return;
+  }
+  // Process message
+});","<script src=""https://api.example.com/loader.js?key=AIzaSyB-YourAPIKeyHere""></script>
+"
+"<input type=""hidden"" id=""userData"" value=""user_secret_data"">","<script>
+  var userInput = window.location.hash.slice(1);
+  document.getElementById('content').innerHTML = userInput;
+</script>","<input type=""hidden"" name=""socialSecurityNumber"" value=""123-45-6789"">","{ name: 'AngularJS', currentVersion: '1.6.4', latestVersion: '1.8.2' }","app.use(function(req, res, next) {
+  res.header(""Access-Control-Allow-Origin"", ""*"");
+  next();
+});
+","document.cookie = ""username=JohnDoe; expires=Thu, 18 Dec 2023 12:00:00 UTC; path=/"";
+"
+"document.getElementById('downloadButton').onclick = function() {
+  window.location.href = '/path/to/secure/file';
+};","var data = decodeURIComponent(window.location.hash.substr(1));
+document.body.innerHTML += '<div>' + data + '</div>';","localStorage.setItem('sessionToken', 'abc123xyz789');","{ name: 'React', currentVersion: '16.13.1', latestVersion: '18.0.0' }","<script src=""http://external.com/script.js""></script>
+","localStorage.setItem('creditCard', '1234-5678-9101-1121');
+"
+"<a href=""/files/secret-file.pdf"">Download Secret File</a>",eval('var userParams = ' + location.search.substr(1));,"<form action=""http://example.com/submit"" method=""post"">
+  <input type=""text"" name=""username"">
+  <input type=""password"" name=""password"">
+  <input type=""submit"" value=""Submit"">
+</form>","{ name: 'Vue', currentVersion: '2.6.11', latestVersion: '3.2.0' }","<object data=""http://thirdparty.com/widget""></object>
+","sessionStorage.setItem('userInfo', JSON.stringify({name: 'John Doe', ssn: '123-45-6789'}));
+"
+"if (user.role !== 'admin') {
+  window.location.href = '/unauthorized.html';
+} else {
+  window.location.href = '/admin.html';
+}","setTimeout('alert(""' + location.search.substr(1) + '"")', 1000);",fetch(`http://example.com/api?token=${sessionToken}`);,"{ name: 'Moment.js', currentVersion: '2.24.0', latestVersion: '2.29.1' }","fetch('http://anywebsite.com/data')
+  .then(response => response.json())
+  .then(data => console.log(data));","var config = {
+  apiKey: 'ABCD-1234-EFGH-5678',
+  clientId: 'your-client-id.apps.googleusercontent.com'
+};"
+"<script>
+  var apiKey = 'AIzaSyD4QJSaM-something_something';
+</script>","var userData = window.location.hash;
+eval('var userDataObj = ' + userData);","<!-- TODO: Remove before production. Current admin password is 'admin123' -->
+<div>Content goes here</div>","{ name: 'Lodash', currentVersion: '4.17.11', latestVersion: '4.17.21' }","const socket = new WebSocket('ws://thirdparty.com/socket');
+socket.onmessage = function(event) {
+  console.log('Message from server ', event.data);
+};","localStorage.setItem('authToken', 'Basic YWRtaW46cGFzc3dvcmQ=');
+"
+"#adminPanel {
+  display: none;
+}","<script>
+  var frameSrc = document.location.search.substring(1);
+  document.getElementById('myFrame').src = frameSrc;
+</script>","const redacted = text.replace(/(password: )(.*)/, '$1[REDACTED]');
+console.log(redacted);","{ name: 'Handlebars', currentVersion: '4.1.2', latestVersion: '4.7.7' }","<a href=""http://externaldomain.com"" target=""_blank"">Visit</a>
+","<input type=""hidden"" name=""csrf_token"" value=""sensitiveToken12345"">
+"
+"document.getElementById('submit').onclick = function() {
+  if (document.getElementById('username').value === 'admin') {
+    document.getElementById('adminForm').submit();
+  } else {
+    alert('Not authorized!');
+  }
+};",document.getElementById('referrer').innerHTML = 'You came from: ' + document.referrer;,"<input type=""email"" name=""email"" autocomplete=""on"">
+","{ name: 'Backbone.js', currentVersion: '1.3.3', latestVersion: '1.4.0' }","<embed src=""http://thirdparty.com/plugin"" type=""application/x-shockwave-flash"">
+","<div data-user-id=""12345"" data-role=""admin"">User Profile</div>
+"
+"var userRole = localStorage.getItem('userRole');
+if (userRole === 'admin') {
+  document.location.href = '/admin-dashboard.html';
+} else {
+  document.location.href = '/user-dashboard.html';
+}","var scriptSrc = location.search.split('src=')[1];
+var script = document.createElement('script');
+script.src = scriptSrc;
+document.head.appendChild(script);","const API_KEY = 'NjQ2MzMzODI0ODJmZD';
+const response = fetch(`https://api.example.com/data?apiKey=${API_KEY}`);","{ name: 'Ember.js', currentVersion: '3.10.1', latestVersion: '4.0.0' }","$.ajax({
+  url: ""http://anyapi.com/data"",
+  method: ""GET"",
+  success: function(response) {
+    console.log(response);
+  }
+});","localStorage.setItem('encryptedData', 'encryptedStringHere');
+"

@@ -1,0 +1,25 @@
+# Exclude virtual environment directories
+venv/
+.venv/
+
+# Exclude common Python files and directories
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Exclude virtual environment in project subdirectories
+**/venv/
+**/.venv/
+
+# Exclude VS Code settings
+.vscode/
